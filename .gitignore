@@ -1,0 +1,23 @@
+# Go build artifacts
+bin/
+build/
+
+golog
+*.exe
+*.out
+*.test
+
+# Go modules cache
+/pkg/mod/
+
+# Logs and output files
+*.log
+*.txt
+/output/
+
+# Editor + OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
