@@ -40,7 +40,7 @@ var statsCmd = &cobra.Command{
 			}
 		}
 
-		// Build the output text
+		
 		output := fmt.Sprintf(
 			"Log Statistics\n---------------------------\nTotal lines:     %d\nError entries:   %d\nWarning entries: %d\n",
 			total, errors, warnings,
@@ -49,9 +49,9 @@ var statsCmd = &cobra.Command{
 		fmt.Println("golog CLI starting…")
 		fmt.Print(output)
 
-		// If user wants to save stats to a file
+		
 		if outFile != "" {
-			// If user passed a directory, auto-generate file name
+			
 			if isDir(outFile) {
 				timestamp := time.Now().Format("2006-01-02_15-04-05")
 				outFile = fmt.Sprintf("%s/golog_stats_%s.txt", outFile, timestamp)
@@ -74,7 +74,7 @@ func init() {
 	statsCmd.Flags().StringVarP(&outFile, "output-file", "o", "", "Save stats output to a file")
 }
 
-// helper
+
 func isDir(path string) bool {
 	info, err := os.Stat(path)
 	if err != nil {
