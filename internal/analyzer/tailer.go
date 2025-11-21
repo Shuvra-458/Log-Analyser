@@ -32,7 +32,7 @@ func TailFile(filePath string) error {
 
 		trimmed := strings.TrimSpace(line)
 
-		// Color-highlighted streaming output
+		
 		lower := strings.ToLower(trimmed)
 		switch {
 		case strings.Contains(lower, "error"):
