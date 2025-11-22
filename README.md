@@ -52,6 +52,19 @@ golog/
 ```
 
 ---
+## 🚀 Run with Docker (Recommended)
+
+No setup needed — just run:
+
+```
+docker pull shuvra458/golog:latest
+```
+If using Windows command prompt/ Powershell, run using this command:
+```
+docker run --rm shuvra458/golog:latest
+```
+
+---
 
 ## 🔧 Installation
 
