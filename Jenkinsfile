@@ -5,6 +5,7 @@ pipeline {
         APP_NAME = "golog"
         DOCKER_IMAGE = "golog:latest"
         DOCKERHUB_REPO = "shuvra458/golog"
+        GOTOOLCHAIN = "auto"
     }
 
     stages {
