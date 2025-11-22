@@ -28,10 +28,10 @@ var errorsCmd = &cobra.Command{
 			return
 		}
 
-		// Console output (Theme 3)
+		
 		exporter.PrintErrorsConsoleUTC(lines, total)
 
-		// Write/append if requested
+		
 		if outFile != "" {
 			if err := exporter.WriteErrorsReportUTC(outFile, false, lines, total); err != nil {
 				fmt.Println("Error writing report:", err)

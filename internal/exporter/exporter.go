@@ -7,12 +7,12 @@ import (
 	"time"
 )
 
-// Helper: UTC timestamp header (Theme 3)
+
 func utcHeader() string {
 	return fmt.Sprintf("[Report Generated: %s]\n\n", time.Now().UTC().Format("2006-01-02 15:04:05 UTC"))
 }
 
-// ----------------------- STATS output -----------------------
+
 func PrintStatsConsoleUTC(total, errs, warns int) {
 	fmt.Print(utcHeader())
 	fmt.Println("Log Statistics")
@@ -40,7 +40,7 @@ func printStatsBody(total, errs, warns int) {
 }
 
 func printStatsBodyToWriter(w io.Writer, total, errs, warns int) {
-	// percentages
+
 	var pErr, pWarn float64
 	if total > 0 {
 		pErr = (float64(errs) / float64(total)) * 100.0
@@ -51,7 +51,7 @@ func printStatsBodyToWriter(w io.Writer, total, errs, warns int) {
 	_, _ = fmt.Fprintf(w, "Warning Entries:   %d   (%.1f%%)\n", warns, pWarn)
 }
 
-// ----------------------- ERRORS output -----------------------
+
 func PrintErrorsConsoleUTC(lines []string, total int) {
 	fmt.Print(utcHeader())
 	fmt.Println("Error Entries")
@@ -81,11 +81,11 @@ func WriteErrorsReportUTC(path string, appendMode bool, lines []string, total in
 	return nil
 }
 
-// ----------------------- file helper -----------------------
+
 func openWriter(path string, appendMode bool) (*os.File, error) {
 	if appendMode {
 		return os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	}
-	// overwrite
+
 	return os.Create(path)
 }

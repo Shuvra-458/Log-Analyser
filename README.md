@@ -58,8 +58,8 @@ golog/
 ### Clone repo:
 
 ```
-git clone <your repo url>
-cd golog
+git clone https://github.com/Shuvra-458/Log-Analyser.git
+cd Log-Analyser
 ```
 
 ### Build binary:
